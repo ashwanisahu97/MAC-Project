@@ -1,0 +1,125 @@
+.main{
+    display:flex;
+    width:95%;
+    margin:auto;
+     }
+
+/* -------left Div------- */
+.left-div{
+   /* width:20%; */
+   display:grid;
+   grid-template-columns: repeat(1,1fr);
+   grid-template-rows: 50px 200px 100px 200px 50px 50px 50px;
+   height:1000px;
+   margin:0px 25px;
+   /* border:1px solid purple; */
+}
+
+.left-div>div{
+   width:200px;
+   padding-left: 10px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   /* border:1px solid pink; */
+}
+
+.price-range{
+   line-height: 7px;
+}
+
+.price-range>div{
+  display:flex;
+  justify-content: space-between;
+}
+
+/* -------Right Div------- */
+/* --------upper Container------- */
+.upper-container{
+   display:flex;
+   height:100px;
+   width:1200px;
+   justify-content: space-between;
+   align-items: center;
+   align-content:center;
+   /* border:1px solid yellow */
+}
+.upper-head-div{
+   display:flex;
+   gap:20px;
+}
+/* #mobile-div>h1{
+font-family:RobotoMedium;
+Font being Rendered:RobotoMedium;
+border:1px solid red;
+} */
+.result-div{
+   margin-top:10px;
+}
+.sort-div{
+   /* margin-top: 20px; */
+   display:flex;
+   width:100px;
+   height:30px;
+   align-items: center;
+   justify-content: space-between;
+   border:1px solid orange;
+}
+.filter{
+  width:20px;
+}
+
+/* -------lower Container------- */
+.container{
+   display:grid;
+   grid-gap:25px;
+   grid-template-columns:repeat(5,1fr);
+}
+
+.container>div>h4+p{
+   color:red;
+   text-align: left;
+   /* margin-left:10px; */
+   /* font-size: 1.1em; */
+}
+.container>div>p:nth-child(1){
+   color:red;
+}
+
+.container>div>div{
+   display:flex;
+   justify-content: space-between;
+   font-size: 1.1em;
+   /* background: red; */
+}
+
+.container>div>div>p:nth-child(2){
+   color:blue;
+}
+.container>div>div>p:nth-child(1){
+   text-decoration: line-through;
+}
+.container>div>button{
+   /* padding-left:-20px; */
+   /* margin: auto; */
+   width:100%;
+   padding:2px 0px;
+   background:red;
+   color:white;
+   border-radius: 5px;;
+}
+
+/* --------media Query-------- */
+/* --------for small screen------ */
+@media only screen and (min-width:0px) and (max-width:375px){
+   #container{
+       display:flex;
+       flex-wrap: wrap;
+   }
+}
+    
+/* --------for medium screen------ */
+@media only screen and (min-width:375px) and (max-width:768px){
+#container{
+       display:flex;
+       flex-wrap: wrap;
+   } 
+}
