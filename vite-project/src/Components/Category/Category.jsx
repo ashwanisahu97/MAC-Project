@@ -1,24 +1,33 @@
 import React,{ useEffect } from "react"
 import axios from "axios"
 import "./Category.css"
-import { addData } from '../../Redux/Category/Action'
+// import { addData } from '../../Redux/Category/Action'
+import { getProductsLoading,getProductsFailure,getProductsSuccess } from "../../Redux/Category/Action"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { Link} from "react-router-dom"
 const Category = () => {
     const dispatch = useDispatch();
-    const { mobilesData } = useSelector((store) => store.category)
+    const mobilesData= useSelector((store) => store.products.products)
+    const { loading } = useSelector((store) => store.products)
     // const navigate = useNavigate();
     useEffect(() => { 
         getData();
     }, [])
     const getData = () => { 
+        dispatch(getProductsLoading())
         axios.get("http://localhost:4000/database/").then(({ data }) => { 
-            dispatch(addData(data));
             console.log("data", data);
-        })
+            // dispatch(addData(data));
+            // dispatch(getProductsSuccess(data))
+           
+        }).catch((err)=>dispatch(getProductsFailure()))
     }
     console.log("mobilesData",mobilesData)
+    if (loading) {
+        return <p>Data is loading...</p>;
+      }
+    
   return (
     <div>
        <div className="headerDiv">
@@ -110,7 +119,9 @@ const Category = () => {
 
 </div>
                   <div className="container">
+                        
                       {
+                 
                           mobilesData.map((e) => { 
                               return (
                                 <div>
@@ -126,6 +137,7 @@ const Category = () => {
                            )   
                           })
                       }
+                    
 </div>
 
 </div>

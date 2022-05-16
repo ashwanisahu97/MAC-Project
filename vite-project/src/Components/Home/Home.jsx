@@ -14,9 +14,8 @@ const Home = () => {
   }, [])
   const getData = () => {
     axios.get("http://localhost:4000/database").then(({ data }) => {
-      // console.log("myData", data);
+      console.log("myData", data);
       dispatch(addHomeData(data));
-      // dispatch(addBaseData(data.basicDetails));
     })
   }
   // console.log("General Data", basicDetails);
@@ -34,48 +33,48 @@ const Home = () => {
     </div>
   )
 }
-//     <div>
-//       <div className="bigContainer">
-//         {
-//           basicDetails.map((el) => {
-//             return (
-//               <div className="container">
-//                 <div className="head-part">
-//                   <div><h1>{el.title}</h1></div>
-//                   <div><button>VIEW ALL</button></div>
-//                 </div>
+    <div>
+      <div className="bigContainer">
+        {
+          basicDetails.map((el) => {
+            return (
+              <div className="container">
+                <div className="head-part">
+                  <div><h1>{el.title}</h1></div>
+                  <div><button>VIEW ALL</button></div>
+                </div>
 
-//                 <div className={e.class}>
-//                   {/* {
-//                     arr.map((elm) => {
-//                       return(
-//                       elm.map((e) => {
-//                         return (
-//                           <div>
-//                             <img src={e.img} alt="" width="150" height="150" />
-//                             <h4>{e.feature}</h4>
-//                             <p>{e.newPrice}</p>
-//                             <div>
-//                               <p>{e.oldPrice}</p>
-//                               <p>{e.offer}</p>
-//                             </div>
-//                             <button>offer Available</button>
-//                           </div>
-//                         )
-//                       })
-//                       )
-//                     })
-//                   } */}
-//                 </div>
-//               </div>
-//             )
-//           })
-//         }
-//         )
-//       </div>
-//     </div>
-//   )
-// }
+                <div className={e.class}>
+                  {
+                    arr.map((elm) => {
+                      return(
+                      elm.map((e) => {
+                        return (
+                          <div>
+                            <img src={e.img} alt="" width="150" height="150" />
+                            <h4>{e.feature}</h4>
+                            <p>{e.newPrice}</p>
+                            <div>
+                              <p>{e.oldPrice}</p>
+                              <p>{e.offer}</p>
+                            </div>
+                            <button>offer Available</button>
+                          </div>
+                        )
+                      })
+                      )
+                    })
+                  }
+                </div>
+              </div>
+            )
+          })
+        }
+        )
+      </div>
+    </div>
+  )
+}
          
 //             {/* {
 //               genData.map((e) => {
