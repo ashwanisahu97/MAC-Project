@@ -1,32 +1,33 @@
 import React,{ useEffect } from "react"
 import axios from "axios"
 import "./Category.css"
-// import { addData } from '../../Redux/Category/Action'
 import { getProductsLoading,getProductsFailure,getProductsSuccess } from "../../Redux/Category/Action"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom";
 import { Link} from "react-router-dom"
 const Category = () => {
     const dispatch = useDispatch();
-    const mobilesData= useSelector((store) => store.products.products)
+    let [{ mobilesData }] = useSelector((store) => store.home.data)
+    localStorage.setItem("mobilesData", JSON.stringify(mobilesData));
+    mobilesData=JSON.parse(localStorage.getItem("mobilesData"))
     const { loading } = useSelector((store) => store.products)
-    // const navigate = useNavigate();
-    useEffect(() => { 
-        getData();
-    }, [])
-    const getData = () => { 
-        dispatch(getProductsLoading())
-        axios.get("http://localhost:4000/database/").then(({ data }) => { 
-            console.log("data", data);
-            // dispatch(addData(data));
-            // dispatch(getProductsSuccess(data))
+    const navigate = useNavigate();
+    // useEffect(() => { 
+    //     getData();
+    // }, [])
+    // const getData = () => { 
+    //     dispatch(getProductsLoading())
+    //     axios.get("http://localhost:4000/database/").then(({ data }) => { 
+    //         console.log("data", data);
+    //         // dispatch(addData(data));
+    //         dispatch(getProductsSuccess(data))
            
-        }).catch((err)=>dispatch(getProductsFailure()))
-    }
-    console.log("mobilesData",mobilesData)
-    if (loading) {
-        return <p>Data is loading...</p>;
-      }
+    //     }).catch((err)=>dispatch(getProductsFailure()))
+    // }
+    // console.log("mobilesData",mobilesData)
+    // // if (loading) {
+    // //     return <p>Data is loading...</p>;
+    // //   }
     
   return (
     <div>
@@ -122,16 +123,16 @@ const Category = () => {
                         
                       {
                  
-                          mobilesData.map((e) => { 
+                         mobilesData.map((e) => { 
                               return (
                                 <div>
-                                      <img src={e.img} alt="" width="150" height="150"/>
+                                      <img src={e.img} alt="" width="150" height="150" onClick={() => { navigate(`/ProductDetails/${e.id}`)}}/>
                                        <h4>{e.feature}</h4>
                                        <p>{e.newPrice}</p>
                                       <div>
                                     <p>{e.oldPrice}</p>
                             <p>{e.offer}</p>
-                                                       </div>
+                                         </div>
                                   <button>offer Available</button>
                                             </div>
                            )   

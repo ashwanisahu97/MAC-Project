@@ -3,7 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import { Routes,Route} from "react-router-dom"
 import Category from "./Components/Category/Category"
-// import Home from './Components/Home/Home'
+import Home from './Components/Home/Home'
 import ProductDetails from './Components/ProductDetails/ProductDetails'
 import Navbar from "./Components/Navbar"
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar/>
      <Routes>
-        {/* <Route path="/" element={<Home/>}></Route> */}
+        <Route path="/" element={<Home/>}></Route>
         <Route path="/Category" element={<Category/>}></Route>
         <Route path="/ProductDetails/:id" element={<ProductDetails/>}></Route>
      </Routes>

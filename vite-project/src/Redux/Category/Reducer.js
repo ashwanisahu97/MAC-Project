@@ -16,6 +16,8 @@ const initState = {
     products:[]
 }
 export const productsReducer = (store = initState, { type, payload }) => {
+    console.log("payload",payload)
+    console.log("store",store)
     switch (type) {
         case GET_PRODUCTS_LOADING:
             return { ...store, loading: true }
@@ -23,8 +25,8 @@ export const productsReducer = (store = initState, { type, payload }) => {
             return {
                 ...store,
                 loading: false,
-                products: [...payload],
-                error:false
+                error:false,
+                products: [payload]
             }
         case GET_PRODUCTS_FAILURE:
             return {

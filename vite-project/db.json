@@ -198,7 +198,7 @@
         {
             "id":4,
             "category": "mobile",
-            "feature": "OnePlus 9 Pro 5G (8 GB RAM, 128 GB Storage,",
+            "feature": "OnePlus 9 Pro 5G (8 GB RAM, 128 GB Storage)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/63796658-96e1-48c4-8b7e-4aa910e81c13_182x182.jpg",
             "newPrice": "59,999",
             "offer": "8%",
@@ -218,7 +218,7 @@
         {
             "id":6,
             "category": "mobile",
-            "feature": "OnePlus 9 5G (8 GB RAM, 128 GB Storage, Arctic",
+            "feature": "OnePlus 9 5G (8 GB RAM, 128 GB Storage, Arctic)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/bdf16d36-53df-4151-9aa1-0f46112a760c_182x182.jpg",
             "newPrice": "44,999",
             "offer": "10%",
@@ -228,7 +228,7 @@
         {
             "id":7,
             "category": "mobile",
-            "feature": "OnePlus 9R 5G (12 GB RAM, 256 GB Storage,",
+            "feature": "OnePlus 9R 5G (12 GB RAM, 256 GB Storage)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/cc37c6f9-5095-4818-af27-6295ddd4c532_182x182.jpg",
             "newPrice": "40,999",
             "offer": "7%",
@@ -248,7 +248,7 @@
         {
             "id":9,
             "category": "mobile",
-            "feature": "Redmi Note 10S (6 GB RAM, 64 GB Storage, Deep",
+            "feature": "Redmi Note 10S (6 GB RAM, 64 GB Storage, Deep)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/df5630de-bddb-4538-93b0-a2894e5e2b94_182x182.jpg",
             "newPrice": "13,999",
             "offer": "18%",
@@ -288,7 +288,7 @@
         {
             "id":13,
             "category": "mobile",
-            "feature": "Redmi 10 Prime (6 GB RAM, 128 GB ROM",
+            "feature": "Redmi 10 Prime (6 GB RAM, 128 GB ROM)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/d03ad00a-1328-4335-8de4-06c9e133f17a21091150_182x182.jpg",
             "newPrice": "14,499",
             "offer": "15%",
@@ -308,7 +308,7 @@
         {
             "id":15,
             "category": "mobile",
-            "feature": "Redmi Note 10T 5G (4 GB RAM, 64 GB ROM, Graphit",
+            "feature": "Redmi Note 10T 5G (4 GB RAM, 64 GB ROM, Graphit)",
             "img": "https://d2xamzlzrdbdbn.cloudfront.net/products/2e5831cb-c02b-48e6-99d1-79edbaac4d20_182x182.jpg",
             "newPrice": "13,999",
             "offer": "18%",
